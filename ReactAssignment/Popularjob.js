@@ -1,40 +1,132 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image, TextInput, TouchableOpacity, ScrollView } from 'react-native';
-import Popularjob from './Popularjob';
 
-const Home = ({ route }) => {
-  const { userName, userEmail } = route.params;
+const Popularjob = ({ route }) => {
+  
 
   return (
-    <ScrollView style={styles.container}>
-        <View style={styles.header}>
-        <View style={styles.userInfo}>
-      <Text style={styles.userName}>{userName}</Text>
-      <Text style={styles.userEmail}>{userEmail}</Text>
-      </View>
-
-      <View style={styles.profileContainer}>
-      <Image source={require('./assets/Ellipse.png')} style={styles.profileImage} />
-      </View>
-    </View>
-
-    <View style={styles.inputContainer}>
-            <TextInput style={styles.input} placeholder='search for a job or position'/>
-            <TouchableOpacity><View style={styles.filterButton}>
-            <Image  source={require("./assets/filter.png")}/></View></TouchableOpacity>
+   
+        <View>
+            <View style={{marginBottom:30,marginTop:30}}>
+         <View style={{flexDirection: 'row', fontSize:18,fontWeight:"bold"}}>
+        <Text style={styles.featured}>Popular Jobs</Text>
         </View>
         
-         <View style={{flexDirection: 'row'}}>
-        <Text style={styles.featured}>Featured Jobs</Text>
+        <Text style={styles.seeall}>See all</Text></View>
+
+<ScrollView showsHorizontalScrollIndicator={false} contentContainerStyle={styles.horizontalscrollContainer} > 
+
+   <View style={{flexDirection:'column', }}>
+
+        <View style={{backgroundColor: '#FBFFFF',marginBottom:30 , padding:10, borderRadius: 12,  height:160 }}>
+          <View style= {{flexDirection: 'row', marginBottom:'auto'}}>
+            <View style={{backgroundColor: 'white', width: 30, borderRadius: 7, height:30, alignItems:'center', justifyContent: 'center' }}>
+                <Image style={styles.instagram} source={require('./assets/instagram.jpeg')} />
+            </View>
+            <View style={styles.facebook}>
+            <Text>Backend Developer</Text>
+            <Text>Instagram</Text>
+            </View>
+            </View>
+
+            <View style= {{flexDirection: 'row',}}>
+            <Text style={styles.money}>$180,000</Text>
+            <Text style={styles.location}>Peckham, UK </Text>
+            </View>
+
         </View>
+
         
-        <Text style={styles.seeall}>See all</Text>
+        <View style={{backgroundColor: '#FBFFFF',marginBottom:30 , padding:10, borderRadius: 12,  height:160 }}>
+          <View style= {{flexDirection: 'row', marginBottom:'auto'}}>
+            <View style={{backgroundColor: 'white', width: 30, borderRadius: 7, height:30, alignItems:'center', justifyContent: 'center' }}>
+                <Image  source={require('./assets/google.png')} />
+            </View>
+            <View style={styles.facebook}>
+            <Text>Project Manager</Text>
+            <Text>Google</Text>
+            </View>
+            </View>
 
-<ScrollView horizontal={true} showsHorizontalScrollIndicator={false} contentContainerStyle={styles.horizontalscrollContainer} > 
+            <View style= {{flexDirection: 'row',}}>
+            <Text style={styles.money}>$400,000</Text>
+            <Text style={styles.location}>Mumbai, India </Text>
+            </View>
 
-   <View style={{flexDirection:"row", }}>
+        </View>
 
-        <View style={{backgroundColor: '#B0E0E6',marginRight:30 , padding:10, borderRadius: 12, width: 300, height:160 }}>
+        <View style={{backgroundColor: '#FBFFFF',marginBottom:30 , padding:10, borderRadius: 12,  height:160 }}>
+          <View style= {{flexDirection: 'row', marginBottom:'auto'}}>
+            <View style={{backgroundColor: 'white', width: 30, borderRadius: 7, height:30, alignItems:'center', justifyContent: 'center' }}>
+                <Image style={styles.pinterest} source={require('./assets/pinterest.png')} />
+            </View>
+            <View style={styles.facebook}>
+            <Text>Database Analyst</Text>
+            <Text>Pinterest</Text>
+            </View>
+            </View>
+
+            <View style= {{flexDirection: 'row',}}>
+            <Text style={styles.money}>$300,000</Text>
+            <Text style={styles.location}>Atlanta, America </Text>
+            </View>
+
+        </View>
+
+        <View style={{backgroundColor: '#FBFFFF',marginBottom:30 , padding:10, borderRadius: 12,  height:160 }}>
+          <View style= {{flexDirection: 'row', marginBottom:'auto'}}>
+            <View style={{backgroundColor: 'white', width: 30, borderRadius: 7, height:30, alignItems:'center', justifyContent: 'center' }}>
+                <Image style={styles.github} source={require('./assets/github.png')} />
+            </View>
+            <View style={styles.facebook}>
+            <Text>Quality Tester</Text>
+            <Text>GitHub</Text>
+            </View>
+            </View>
+
+            <View style= {{flexDirection: 'row',}}>
+            <Text style={styles.money}>$160,000</Text>
+            <Text style={styles.location}>Lagos, Nigeria </Text>
+            </View>
+
+        </View>
+
+        <View style={{backgroundColor: '#FBFFFF',marginBottom:30 , padding:10, borderRadius: 12,  height:160 }}>
+          <View style= {{flexDirection: 'row', marginBottom:'auto'}}>
+            <View style={{backgroundColor: 'white', width: 30, borderRadius: 7, height:30, alignItems:'center', justifyContent: 'center' }}>
+                <Image style={styles.klm} source={require('./assets/klm.png')} />
+            </View>
+            <View style={styles.facebook}>
+            <Text>Mechanic</Text>
+            <Text>KLM</Text>
+            </View>
+            </View>
+
+            <View style= {{flexDirection: 'row',}}>
+            <Text style={styles.money}>$480,000</Text>
+            <Text style={styles.location}> Manchester,UK </Text>
+            </View>
+
+        </View>
+
+        <View style={{backgroundColor: '#FBFFFF',marginBottom:30 , padding:10, borderRadius: 12,  height:160 }}>
+          <View style= {{flexDirection: 'row', marginBottom:'auto'}}>
+            <View style={{backgroundColor: 'white', width: 30, borderRadius: 7, height:30, alignItems:'center', justifyContent: 'center' }}>
+                <Image style={styles.mattel} source={require('./assets/mattel.jpeg')} />
+            </View>
+            <View style={styles.facebook}>
+            <Text>Marketing Manager</Text>
+            <Text>Mattel</Text>
+            </View>
+            </View>
+
+            <View style= {{flexDirection: 'row',}}>
+            <Text style={styles.money}>$250,000</Text>
+            <Text style={styles.location}>New York, America </Text>
+            </View>
+
+        </View>
+        <View style={{backgroundColor: '#FBFFFF',marginBottom:30 , padding:10, borderRadius: 12,  height:160 }}>
           <View style= {{flexDirection: 'row', marginBottom:'auto'}}>
             <View style={{backgroundColor: 'white', width: 30, borderRadius: 7, height:30, alignItems:'center', justifyContent: 'center' }}>
                 <Image source={require('./assets/Vector.png')} />
@@ -52,81 +144,7 @@ const Home = ({ route }) => {
 
         </View>
 
-        
-        <View style={{backgroundColor: '#004F98', padding:10, marginRight:30,borderRadius: 12, width: 300, height:160 }}>
-          <View style= {{flexDirection: 'row', marginBottom:'auto'}}>
-            <View style={{backgroundColor: 'white', width: 30, borderRadius: 7, height:30, alignItems:'center', justifyContent: 'center' }}>
-                <Image style={styles.pinterest} source={require('./assets/pinterest.png')} />
-            </View>
-            <View style={styles.facebook}>
-            <Text>Database Analyst</Text>
-            <Text>Pinterest</Text>
-            </View>
-            </View>
-
-            <View style= {{flexDirection: 'row',}}>
-            <Text style={styles.money}>$300,000</Text>
-            <Text style={styles.location}>Atlanta, America</Text>
-            </View>
-
-        </View>
-
-        
-        <View style={{backgroundColor: '#008080', padding:10,marginRight:30,  borderRadius: 12, width: 300, height:160 }}>
-          <View style= {{flexDirection: 'row', marginBottom:'auto'}}>
-            <View style={{backgroundColor: 'white', width: 30, borderRadius: 7, height:30, alignItems:'center', justifyContent: 'center' }}>
-                <Image style={styles.github} source={require('./assets/github.png')} />
-            </View>
-            <View style={styles.facebook}>
-            <Text>Quality Tester</Text>
-            <Text>GitHub</Text>
-            </View>
-            </View>
-
-            <View style= {{flexDirection: 'row',}}>
-            <Text style={styles.money}>$160,000</Text>
-            <Text style={styles.location}>Lagos,Nigeria </Text>
-            </View>
-
-        </View>
-
-        <View style={{backgroundColor: '#808000', padding:10,marginRight:30,  borderRadius: 12, width: 300, height:160 }}>
-          <View style= {{flexDirection: 'row', marginBottom:'auto'}}>
-            <View style={{backgroundColor: 'white', width: 30, borderRadius: 7, height:30, alignItems:'center', justifyContent: 'center' }}>
-                <Image source={require('./assets/google.png')} />
-            </View>
-            <View style={styles.facebook}>
-            <Text>Project Manager</Text>
-            <Text>Google</Text>
-            </View>
-            </View>
-
-            <View style= {{flexDirection: 'row',}}>
-            <Text style={styles.money}>$400,000</Text>
-            <Text style={styles.location}>Mumbai, India </Text>
-            </View>
-
-        </View>
-
-        <View style={{backgroundColor: '#3CB371', padding:10,marginRight:30,  borderRadius: 12, width: 300, height:160 }}>
-          <View style= {{flexDirection: 'row', marginBottom:'auto'}}>
-            <View style={{backgroundColor: 'white', width: 30, borderRadius: 7, height:30, alignItems:'center', justifyContent: 'center' }}>
-                <Image style={styles.klm} source={require('./assets/klm.png')} />
-            </View>
-            <View style={styles.facebook}>
-            <Text>Mechanic</Text>
-            <Text>KLM</Text>
-            </View>
-            </View>
-
-            <View style= {{flexDirection: 'row',}}>
-            <Text style={styles.money}>$480,000</Text>
-            <Text style={styles.location}> Manchester, UK </Text>
-            </View>
-
-        </View>
-
-        <View style={{backgroundColor: '#123524', padding:10,marginRight:30,  borderRadius: 12, width: 300, height:160 }}>
+        <View style={{backgroundColor: '#FBFFFF',marginBottom:30 , padding:10, borderRadius: 12,  height:160 }}>
           <View style= {{flexDirection: 'row', marginBottom:'auto'}}>
             <View style={{backgroundColor: 'white', width: 30, borderRadius: 7, height:30, alignItems:'center', justifyContent: 'center' }}>
                 <Image style={styles.honda} source={require('./assets/honda.png')} />
@@ -143,48 +161,10 @@ const Home = ({ route }) => {
             </View>
 
         </View>
-
-        <View style={{backgroundColor: '#FF69B4', padding:10,marginRight:30,  borderRadius: 12, width: 300, height:160 }}>
-          <View style= {{flexDirection: 'row', marginBottom:'auto'}}>
-            <View style={{backgroundColor: 'white', width: 30, borderRadius: 7, height:30, alignItems:'center', justifyContent: 'center' }}>
-                <Image style= {styles.mattel} source={require('./assets/mattel.jpeg')} />
-            </View>
-            <View style={styles.facebook}>
-            <Text>Marketing Manager</Text>
-            <Text>Mattel</Text>
-            </View>
-            </View>
-
-            <View style= {{flexDirection: 'row',}}>
-            <Text style={styles.money}>$250,000</Text>
-            <Text style={styles.location}>New York, America</Text>
-            </View>
-
-        </View>
-
-        <View style={{backgroundColor: '#F7ACCF', padding:10,marginRight:30,  borderRadius: 12, width: 300, height:160 }}>
-          <View style= {{flexDirection: 'row', marginBottom:'auto'}}>
-            <View style={{backgroundColor: 'white', width: 30, borderRadius: 7, height:30, alignItems:'center', justifyContent: 'center' }}>
-                <Image style={styles.instagram} source={require('./assets/instagram.jpeg')} />
-            </View>
-            <View style={styles.facebook}>
-            <Text>Backend Developer</Text>
-            <Text>Instagram</Text>
-            </View>
-            </View>
-
-            <View style= {{flexDirection: 'row',}}>
-            <Text style={styles.money}>$180,000</Text>
-            <Text style={styles.location}> Peckham,UK </Text>
-            </View>
-
-        </View>
         </View>
         </ScrollView>
-        <Popularjob/>
-    </ScrollView>
-
-   
+        </View>
+    
   );
 };
 
@@ -264,34 +244,40 @@ seeall:{
 marginLeft: 'auto'
   },
 
-  pinterest: {
-    width: 30,
-    height: 30,
-  },
-  github: {
+  instagram:{
     width: 30,
     height: 30,
     borderRadius: 10,
-  },
-klm:{
+},
+
+pinterest: {
     width: 30,
     height: 30,
 },
-honda: {
-    width: 20,
-    height: 20,
+github: {
+    width: 30,
+    height: 30,
+    borderRadius: 10,
+},
+klm: {
+    width: 30,
+    height: 30,
 },
 mattel: {
     width: 30,
     height: 30,
     borderRadius: 10,
 },
-instagram:{
-    width: 30,
-    height: 30,
-    borderRadius: 10,
+
+honda: {
+    width: 20,
+    height: 20,
 },
+
+
+
+
 
 });
 
-export default Home;
+export default Popularjob;

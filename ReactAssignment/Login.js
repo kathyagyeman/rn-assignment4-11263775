@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, TextInput, Pressable, Text, Image } from 'react-native';
+import { View, StyleSheet, TextInput, Pressable, Text, Image, Alert } from 'react-native';
 
 
 const Login = ({ navigation }) => {
@@ -8,9 +8,9 @@ const Login = ({ navigation }) => {
 
   const handleLogin = () => {
     if (name && email) {
-      navigation.navigate('Home', { userName: name });
+      navigation.navigate('Home', { userName: name , userEmail: email });
     } else {
-      alert('Please enter both name and email.');
+      Alert.alert('Please enter both name and email.');
     }
   };
 
